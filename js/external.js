@@ -40,9 +40,11 @@ var studentEnrolled = classNotFull && classScheduleCheck
     } else{
         alert("Sorry you can not attend.");}
 
-var numberOfItemsForDiscount
+
 var numberOfItems = prompt("How many items are in your cart?")
 var offerIsNotExpired = confirm("This offer expires today!")
 var isPremiumMember = confirm("Are you a premium Member?")
 
-var discountApplied = isPremiumMember || (numberOfItems >= numberOfItemsForDiscount && offerIsNotExpired)
+var discountApplied = isPremiumMember || (numberOfItems >= 2 && offerIsNotExpired)
+
+alert("Your discount was applied " + discountApplied)
