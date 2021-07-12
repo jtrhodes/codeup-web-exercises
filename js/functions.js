@@ -56,7 +56,7 @@ console.log(isTwo(random))
 /**
  * TODO:
  * Create a function named 'calculateTip' to calculate a tip on a bill at a
- * restaurant. The function should accept a tip percentage and the total of the
+ * restaurant. The function should accept a tip percentage and the total of theg
  * bill, and return the amount to tip
  *
  * Examples:
@@ -65,7 +65,7 @@ console.log(isTwo(random))
  * > calculateTip(0.15, 33.42) // returns 5.013
  */
 function calculateTip(bill, tip){
-    return bill * tip / 100
+    return (bill * tip / 100).toFixed(2)
 }
 /**
  * TODO:
@@ -74,8 +74,8 @@ function calculateTip(bill, tip){
  * then display the dollar amount they should tip
  */
 var bill = prompt("What is your total bill?")
-var tip = prompt("How much would you like to tip")
-alert(" Your total after tip is $" + calculateTip(bill, tip))
+var tip = prompt("What percentage would you like to tip?")
+alert(" Your total tip is $" + calculateTip(bill, tip))
 /**
  * TODO:
  * Create a function named `applyDiscount`. This function should accept a price
@@ -93,3 +93,5 @@ alert(" Your total after tip is $" + calculateTip(bill, tip))
 function applyDiscount(price, discount){
     return price - (price * discount)
 }
+
+console.log(applyDiscount(45, .25))
