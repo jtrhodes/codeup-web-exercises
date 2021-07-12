@@ -151,7 +151,9 @@ alert(" Your lucky number was " + luckyNumber + ". Your total bill was $" + tota
  * Can you refactor your code to use functions?
  * HINT: The way we prompt for a value could be improved
  */
-
+function isNumeric(input){
+    return !isNaN(input)
+}
 function createEvenOddMessage(number){
     return (number % 2 == 0) ? 'Number is even.' : 'Number is odd.';
 }
