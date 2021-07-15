@@ -1,0 +1,1 @@
+var number = prompt("Choose and odd number between 1-50")
