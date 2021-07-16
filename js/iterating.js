@@ -34,7 +34,7 @@ var names = ['Chuck', 'Tony', 'Bobby', 'Edward']
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
-    names.forEach(function(element) {
+    names.forEach(function(element, index) {
         console.log(element);
     });
     /**
@@ -50,5 +50,10 @@ var names = ['Chuck', 'Tony', 'Bobby', 'Edward']
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
+    function logNames(element) {
+        console.log(element);
+    }
 
+    names.forEach(logNames);
+    logNames()
 })();
