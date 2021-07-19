@@ -1,4 +1,4 @@
-(function(){
+(function() {
     "use strict";
 
     /**
@@ -6,7 +6,7 @@
      * Create an array of 4 people's names and store it in a variable called
      * 'names'.
      */
-var names = ['Chuck', 'Tony', 'Bobby', 'Edward']
+    var names = ['Chuck', 'Tony', 'Bobby', 'Edward']
     /**
      * TODO:
      * Create a log statement that will log the number of elements in the names
@@ -34,9 +34,10 @@ var names = ['Chuck', 'Tony', 'Bobby', 'Edward']
      * TODO:
      * Refactor your above code to use a `forEach` loop
      */
-    names.forEach(function(element, index) {
+    names.forEach(function (element, index) {
         console.log(element);
     });
+
     /**
      * TODO:
      * Create the following three functions, each will accept an array and
@@ -50,10 +51,15 @@ var names = ['Chuck', 'Tony', 'Bobby', 'Edward']
      *  > second([1, 2, 3, 4, 5]) // returns 2
      *  > last([1, 2, 3, 4, 5]) // return 5
      */
-    function logNames(element) {
-        console.log(element);
-    }
 
-    names.forEach(logNames);
-    logNames()
 })();
+function first([input]) {
+    return input[0]
+}
+
+function second([arr]){
+    return arr[1]
+}
+function last([arr]) {
+    return arr.slice()
+}
