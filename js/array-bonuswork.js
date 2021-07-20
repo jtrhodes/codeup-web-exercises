@@ -12,8 +12,14 @@
 //     - `allIndexesOf(fruits, "apple")` should return the array [0, 3]
 // - `allIndexesOf(fruits, "guava")` should return the array []
 // - `allIndexesOf(fruits, "pineapple")` should return [4]
-function allIndexOf(arr, element){
-  return arr.indexOf(element)
+function allIndexOf(arr, fruit){
+    fruits.forEach(function(fruit){
+        if (fruit.indexOf(fruit) > -1) {
+            return fruit.indexOf(fruit)
+        }else{
+            return []
+        }
+    })
 }
 
 // - Define a function named `removeAll(array, value)` that takes in two arguments.
