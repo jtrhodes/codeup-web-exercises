@@ -26,7 +26,7 @@ var person = {
      * > console.log(person.sayHello()) // "Hello from Rick Sanchez!"
      */
 person.sayHello = function() {
-    return "Hello" + " " + person.firstName + " " + person.lastName
+    return "Hello from " + person.firstName + " " + person.lastName
 }
     console.log(person.sayHello())
     /** TODO:
@@ -49,12 +49,21 @@ person.sayHello = function() {
         {name: 'George', amount: 320}
     ];
 // shoppers.forEach(function(shopper){
+//     var discount = shopper.amount * .12
 //     if(shopper.amount >= 200){
-//         console.log(shopper.name + ' your total is ' + shopper.amount + ' you will receive a 12% discount for your purchase your total after discount is '  + (shopper.amount - shopper.amount * 12 / 100) )
+//         console.log(shopper.name + ' your total is $' + shopper.amount + ' you will recieve  $' +  discount + ' off and your total after discount is ' + (shopper.amount - shopper.amount * 12 / 100) )
 //     } else{
-//         console.log(shopper.name + ' you do not qualify for a discount so your total is ' + shopper.amount)
+//         console.log(shopper.name + ' you do not qualify for a discount so your total is $' + shopper.amount)
 //     }
 // })
+//     shoppers.forEach(function(shopper){
+//         var calcu
+//         var discountedAmount = calculateDiscount(shopper.amount, discountThreshold, discountPercentage);
+//         var output = shopper.name + ' is purchasing ' + shopper.amount +
+//             ' of stuff. He will get ' + discountedAmount +
+//             ' off the purchase and pay ' +
+//             (shopper.amount - discountedAmount) + '.';
+//     })
     /** TODO:
      * Create an array of objects that represent books and store it in a
      * variable named `books`. Each object should have a title and an author
@@ -103,10 +112,10 @@ var books = [
      *      ---
      *      ...
      */
-books.forEach(function(book,placement){
-    console.log('Book #' + (placement + 1) + '\n' + 'Title: ' + book.title + '\n' + 'Author: ' + book.author.firstname + ' ' + book.author.lastname)
-
-})
+// books.forEach(function(book,placement){
+//     console.log('Book #' + (placement + 1) + '\n' + 'Title: ' + book.title + '\n' + 'Author: ' + book.author.firstname + ' ' + book.author.lastname)
+//
+// })
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
@@ -117,21 +126,21 @@ books.forEach(function(book,placement){
      *   outputs the information described above. Refactor your loop to use your
      *   `showBookInfo` function.
      */
-function createBook(title,author) {
-        return {
-            title: title,
-            author: author
-        }
-    }
-    function showBookInfo(books){
-    return books.title + ' ' + books.author.firstname + ' ' + books.author.lastname
-    }
+// function createBook(title,author) {
+//         return {
+//             title: title,
+//             author: author
+//         }
+//     }
+//     function showBookInfo(books){
+//     return books.title + '\n' + books.author.firstname + ' ' + books.author.lastname
+//     }
 
-    console.log(showBookInfo(books[4]))
+    // console.log(createBook())
 // var testBook = createBook('Fires of Heaven', "Robert Jordan")
 //     console.log(testBook.title + '\n' + testBook.author)
 //
-    books.forEach(function(book,placement){
-        console.log(showBookInfo(books[placement]))
-    })
+//     books.forEach(function(book,placement){
+//         console.log('Book #' + (placement + 1) + '\n' + showBookInfo(books[placement]))
+//     })
 })();
