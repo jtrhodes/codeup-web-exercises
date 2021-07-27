@@ -1,0 +1,43 @@
+#top{
+    text-align-last: center;
+}
+h1{
+    font-family: fantasy;
+    text-decoration: underline;
+    text-decoration-color: #30e838;
+}
+h2{
+    font-family: Farisi;
+    text-decoration: underline;
+    text-decoration-color: #930b93;
+}
+body{
+    background-color: #f15d11;
+}
+body{
+    background-image: url("../img/sample2.jpeg");
+    background-size: cover;
+    background-position: center;
+}
+ol li{
+    list-style: georgian;
+}
+ul li{
+    list-style: circle;
+}
+body{
+    font-family: fantasy;
+}
+table, th, td {
+    border: 1px solid #e70303;
+}
+td{
+    width: 20px;
+    text-decoration-color: #30e838;
+}
+a:hover{
+    background-color: orangered;
+}
+img:hover{
+
+}
