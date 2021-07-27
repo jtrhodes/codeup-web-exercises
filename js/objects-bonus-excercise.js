@@ -27,27 +27,25 @@ console.log(makeCar('Honda', 'Accord'))
 //       each employee should be represented by an object with the following properties:
 //         employee-number, first-name, last-name, sales-units
 
-var salesReport = [
-    {
-        title : 'Monthly Sales Report',
-        date : '07/21/2021',
-        office : 'Codeup',
-        employees : [
-            {employee-number : 1,  first-name : Jane, Janeway 3 },
-            {employee-number : 3,  first-name : Tricia, Triciason 5 },
-            {employee-number : 4,  firstname : Jeannette, Jeanson 4},
-            {employee-number : 5,  first-name : Charles Emmerson III, Winchester 2}
-            {employee-number : 6,  first-name : Chet, Chedderson 8     }
-            {employee-number : 7,  first-name : Chaiam, Chaiamson, 12 }
-            {employee-number : 8,  first-name : Dale, Dalesinger, 1  }
-            {employee-number : 9,  first-name : Zig, Ziglar, 50       }
-            {employee-number : 10, first-name :  Henry, Kissinger, 1  }
-            {employee-number : 11, first-name :  Arthur Herbert, Fonzarelli, 23}
-            {employee-number : 12, first-name :  Betty, Boop, 67}
-
-            }
-   ] }
-]
+// var salesReport = [
+//     {
+        // title : 'Monthly Sales Report',
+        // date : '07/21/2021',
+//         office : 'Codeup',
+//         employees : [
+//             {employee-number : 1,  first-name : Jane, Janeway 3 }
+//             {employee-number : 3,  first-name : Tricia, Triciason 5 }
+//             {employee-number : 4,  firstname : Jeannette, Jeanson 4}
+//             {employee-number : 5,  first-name : Charles Emmerson III, Winchester 2}
+//             {employee-number : 6,  first-name : Chet, Chedderson 8     }
+//             {employee-number : 7,  first-name : Chaiam, Chaiamson, 12 }
+//             {employee-number : 8,  first-name : Dale, Dalesinger, 1  }
+//             {employee-number : 9,  first-name : Zig, Ziglar, 50       }
+//             {employee-number : 10, first-name :  Henry, Kissinger, 1  }
+//             {employee-number : 11, first-name :  Arthur Herbert, Fonzarelli, 23}
+//             {employee-number : 12, first-name :  Betty, Boop, 67}
+//
+// ]
 
 // Monthly Sales Report
 // Date: 03-17-2015
