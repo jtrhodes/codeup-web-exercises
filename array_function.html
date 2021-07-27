@@ -25,10 +25,9 @@
    */
   var arrayToConcat = ['24', 'today', 'fiddlesticks']
 function concatFirstAndLast(array) {
-    array.forEach(function(element){
-      return element[0] + (array.length - 1)
+    array.forEach(function(element, index){
+      return element[0] + element[(array.length - 1)]
     })
-
 }
 </script>
 
