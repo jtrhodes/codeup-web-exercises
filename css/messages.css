@@ -5,3 +5,25 @@ body, html {
     margin: 0;
     font-family: Arial, Ubuntu, sans-serif;
 }
+.message{
+    padding: 10px;
+    margin: 15px;
+    border-radius: 5px;
+    border: 1px lightgray;
+}
+.message-info{
+    background-color: rgb(203, 220, 255);
+    color: rgb(77 44 162);
+}
+.message-success{
+    background-color: rgb(198 246 217);
+    color: rgb(0 145 91);
+}
+.message-warning{
+    background-color: rgb(251 254 195);
+    color: rgb(177 166 56);
+}
+.message-error{
+    background-color: rgb(255 208 214);
+    color: rgb(159 34 70);
+}
