@@ -1,0 +1,9 @@
+.jumbotron{
+    display: flex;
+    /*padding: 4em 0 4em 0 !important;*/
+}
+.jumbotron h1{
+    width: 100%;
+    background: lightgray;
+    opacity: 70%;
+}

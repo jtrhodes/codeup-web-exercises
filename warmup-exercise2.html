@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+
+<script>
+  "use strict";
+  // function analyzeArray2(array){
+  //   for (var i = 0, )
+  // }
+function analyzeArray1(arr1){
+  var arr;
+  arr = {
+    lengthOfArray: arr1.length,
+    containsAllStrings: typeof arr1 === 'string',
+    // combineResults: array.split() + array.join()
+  };
+  return arr
+}
+
+  // console.log(analyzeArray(3, 2, 3))
+  /*
+
+      Create a function, analyzeArray, that takes in a an array and returns an object with information about the passed array.
+      The function should return an object with properties containing information about the array, including the lengthOfArray,
+      containsAllStrings, and the combineResult of adding all elements together.
+
+      EXAMPLE 1
+
+          analyzeArray([1, 2, 3]) returns...
+
+          {
+            lengthOfArray: 3,
+            containsAllStrings: false,
+            combineResult: 6
+          }
+
+
+      EXAMPLE 2
+
+          analyzeArray(['a', 'b', 'c']) returns...
+
+          {
+            lengthOfArray: 3,
+            containsAllStrings: true,
+            combineResult: 'abc'
+          }
+
+
+      EXAMPLE 3
+
+          analyzeArray(['bob', 100, null]) returns...
+
+          {
+            lengthOfArray: 3,
+            containsAllStrings: true,
+            combineResult: 'bob123null'
+          }
+
+
+  //  */
+  // function analyzeArray(array){
+  //   array.forEach(function(element,index,array){
+  //
+  //   })
+  // }
+function analyzeExtraArray(arr) {
+  var combine = arr[0];
+  var isAllStrings = true;
+  for (var i = 0; i < arr.length; i++) {
+    if (i === 0) {
+
+    } else {
+      combine += arr[i]
+    }
+    if (typeof arr[i] !== 'string') {
+      isAllStrings = false;
+    }
+  }
+  return {
+    lengthOfArray: arr.length,
+    containsAllStrings: isAllStrings,
+    combineResult: combine
+  };
+}
+arr.every(i => (typeof 1 === 'string'))
+
+  analyzeExtraArray(['1','3',5])
+</script>
+</body>
+</html>
