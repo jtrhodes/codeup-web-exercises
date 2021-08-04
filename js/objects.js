@@ -112,10 +112,10 @@ var books = [
      *      ---
      *      ...
      */
-// books.forEach(function(book,placement){
-//     console.log('Book #' + (placement + 1) + '\n' + 'Title: ' + book.title + '\n' + 'Author: ' + book.author.firstname + ' ' + book.author.lastname)
-//
-// })
+books.forEach(function(book,placement){
+    console.log('Book #' + (placement + 1) + '\n' + 'Title: ' + book.title + '\n' + 'Author: ' + book.author.firstname + ' ' + book.author.lastname)
+
+})
     /**
      * Bonus:
      * - Create a function named `createBook` that accepts a title and author
