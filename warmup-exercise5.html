@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+  // function processNumber(numArr){
+  //     var nums = parseFloat(numArr)
+  //     for(var i = 0; i > numArr.length; i += 2){
+  //         numArr[i] *= 2
+  //         if(numArr[i] > 10){
+  //             numArr[i].toString() + num
+  //         }
+  //     }
+  //     return n
+  // }
+
+  var number = 176248;
+
+  function processNumber(){
+      var numbersArray = number.toString().split("");
+      var total = 0;
+      numbersArray.forEach(function(number, index){
+          if(index % 2 !== 0){
+              if(parseFloat(number) * 2 < 10){
+                  total += parseFloat(number) * 2;
+              } else {
+                  var numberArray = (number * 2).toString().split("")
+                  var numberToAddToTotal = parseFloat(numberArray[0]) + parseFloat(numberArray[1]);
+                  total += numberToAddToTotal
+              }
+          } else {
+              total += parseFloat(number)
+          }
+      });
+      return total;
+  }
+
+
+</script>
+</body>
+</html>
