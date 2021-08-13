@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>jquery exercise</title>
+</head>
+<body>
+<h1 id="codeup" class="">This is my header</h1>
+<p id="pTag" class="">This is my paragraph</p>
+<ul id="unList" class="">
+  <li id="list1" class="codeup">this is my list item</li>
+  <li id="list2" class="">this is a second list item</li>
+  <li id="list3" class="">this is a final item</li>
+</ul>
+<div id="littlestDiv" class="codeup">this is my div that is a div in a div for a div</div>
+
+<script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+<script>
+    // var uList = $('#unList');
+    // alert(uList.text())
+    // $('.codeup').css('border', '1px solid red')
+    var lists = $('li')
+    lists.css('font-size', '20px')
+    var all = $('h1, p, li')
+    all.css('background-color', 'yellow')
+    var header = $('h1')
+    alert(header.text())
+</script>
+</body>
+</html>
