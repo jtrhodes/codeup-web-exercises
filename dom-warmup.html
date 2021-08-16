@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DOM Warmups</title>
+</head>
+<body>
+<h1 id="goodMorning">Good Morning, Draco!</h1>
+<button id="afternoon">Time Change!!</button>
+<!--<button id="evening">Now it's evening.</button>-->
+<script src="js/dom-warmups.js">
+</script>
+<script>
+    var morning = document.querySelector('#goodMorning')
+    var draco = document.querySelector('#afternoon')
+    draco.addEventListener('click', function(){
+        if(morning.innerHTML !== 'Good Afternoon, Draco!') {
+            morning.innerHTML = 'Good Afternoon, Draco!'
+        } else {
+            morning.innerHTML = 'Good Evening, Draco!'
+        }
+    })
+    var evening = document.querySelector('#evening')
+    evening.addEventListener('click', function(){
+        morning.innerHTML = 'Class is Dismissed!!!'
+    })
+
+</script>
+</body>
+</html>
