@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>National Parks FAQ</title>
+  <script src="js/jQuerey.js"></script>
+</head>
+<body>
+<style>
+.invisible {
+  visibility: hidden;
+}
+.highlighted {
+  background-color: #FF0;
+}
+</style>
+<dl>
+  <dt>How many national parks are there in total in the United States?</dt>
+  <dd class="invisible">There are currently 63 national parks in the United States. </dd>
+
+  <dt>Which national parks have the most visitors?</dt>
+  <dd class="invisible">The parks with the most overnight visitors are: Grand Canyon, Yosemite & Yellowstone.</dd>
+
+  <dt> Are there guided tours available? If so, any themed tours, such as wildlife, scenery, flowers, ect.?</dt>
+  <dd class="invisible">Yes, each national park offers guided tours that can either be hosted by the National Park Service or by certified guides.</dd>
+
+  <dt>How many people come to visit each year?</dt>
+  <dd class="invisible">Last year there were 327 million national park visits in the United States.</dd>
+
+  <dt> Are there general rules when visiting a national park or does each park have specific ones?</dt>
+  <dd class="invisible">Yes, there are general rules when visiting national parks and you will find this information under the official website.</dd>
+
+  <dt>When were the national parks established and why?</dt>
+  <dd class="invisible">The National Park Service was established by Congress and initiated by President Theodore Roosevelt during the year 1916 as an opportunity for the American people to enjoy public lands and provide access to its citizens enjoying a national park for recreational purposes.</dd>
+
+  <dt>Who is in charge of the national parks?</dt>
+  <dd class="invisible">All national parks in the United States are managed and and supervised by the National Park Service, which is a federal agency of the Department of Interior.</dd>
+
+  <dt></dt>
+  <a href="#" id="hide">Explore</a>
+  <script>
+    $(document).ready(function() {
+      $('#hide').click(function(event) {
+        event.preventDefault();
+        $('dd').toggleClass('invisible');
+      });
+    });
+    $('dt').click(function(){
+      $(this).toggleClass('highlighted')
+    })
+  </script>
+
+</dl>
+</body>
+</html>
