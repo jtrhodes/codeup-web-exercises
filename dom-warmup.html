@@ -3,28 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <title>DOM Warmups</title>
+
 </head>
 <body>
 <h1 id="goodMorning">Good Morning, Draco!</h1>
 <button id="afternoon">Time Change!!</button>
 <!--<button id="evening">Now it's evening.</button>-->
-<script src="js/dom-warmups.js">
-</script>
+<section>
+    <button data-number="1">Change Me</button>
+    <button data-number="2">Change Me Too</button>
+    <button  data-number="3">Don't forget about me</button>
+    <p id="message"></p>
+</section>
+<button id="reset">Reset</button>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
+
 <script>
-    var morning = document.querySelector('#goodMorning')
-    var draco = document.querySelector('#afternoon')
-    draco.addEventListener('click', function(){
-        if(morning.innerHTML !== 'Good Afternoon, Draco!') {
-            morning.innerHTML = 'Good Afternoon, Draco!'
-        } else {
-            morning.innerHTML = 'Good Evening, Draco!'
-        }
-    })
-    var evening = document.querySelector('#evening')
-    evening.addEventListener('click', function(){
-        morning.innerHTML = 'Class is Dismissed!!!'
-    })
+        var morning = document.querySelector('#goodMorning')
+        var draco = document.querySelector('#afternoon')
+        draco.addEventListener('click', function () {
+            if (morning.innerHTML !== 'Good Afternoon, Draco!') {
+                morning.innerHTML = 'Good Afternoon, Draco!'
+            } else {
+                morning.innerHTML = 'Good Evening, Draco!'
+            }
+        })
+        // var evening = document.querySelector('#evening')
+        // evening.addEventListener('click', function () {
+        //     morning.innerHTML = 'Class is Dismissed!!!'
+        // })
+
+        $('section button').hover(
+            function (e) {
+                $(e.target).css('background-color', 'hotpink');
+            },
+            function (e) {
+                $(e.target).css('background-color', 'unset')
+            })
+        $("#reset").click(function () {
+            location.reload();
+        });
+        var number = $(this).attr("data-number");
+        $("#message").html(number);
+        },
+        function(e) {
+            $(e.target).css("background-color", "white");
+            $("#message").html("");
+        });
 
 </script>
+
 </body>
 </html>

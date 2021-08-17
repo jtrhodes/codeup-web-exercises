@@ -8,7 +8,7 @@
 <body>
 <style>
 .invisible {
-  visibility: hidden;
+  display: none
 }
 .highlighted {
   background-color: #FF0;
@@ -36,9 +36,29 @@
 
   <dt>Who is in charge of the national parks?</dt>
   <dd class="invisible">All national parks in the United States are managed and and supervised by the National Park Service, which is a federal agency of the Department of Interior.</dd>
-
-  <dt></dt>
   <a href="#" id="hide">Explore</a>
+  <ul>
+    <h3>The Park</h3>
+    <li>Fact</li>
+    <li>Fact</li>
+    <li>Fact</li>
+    <li>Fact</li>
+  </ul>
+  <ul>
+    <h3>The Other Park</h3>
+    <li>Fact</li>
+    <li>Fact</li>
+    <li>Fact</li>
+    <li>Fact</li>
+  </ul>
+
+  <ul>
+    <h3>Yet Other Park</h3>
+    <li>Fact</li>
+    <li>Fact</li>
+    <li>Fact</li>
+    <li>Fact</li>
+  </ul>
   <script>
     $(document).ready(function() {
       $('#hide').click(function(event) {
@@ -48,7 +68,8 @@
     });
     $('dt').click(function(){
       $(this).toggleClass('highlighted')
-    })
+    });
+
   </script>
 
 </dl>
