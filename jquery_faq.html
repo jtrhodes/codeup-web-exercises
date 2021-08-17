@@ -14,6 +14,13 @@
   background-color: #FF0;
   max-width: 100%;
 }
+.bolded{
+  font-weight: bold;
+}
+.blueIt{
+  color: blue;
+}
+
 </style>
 <dl>
   <dt>How many national parks are there in total in the United States?</dt>
@@ -59,6 +66,8 @@
     <li>Fact</li>
     <li>Fact</li>
   </ul>
+  <button id="hitIt">Highlight the facts</button>
+
   <script>
     $(document).ready(function() {
       $('#hide').click(function(event) {
@@ -69,6 +78,20 @@
     $('dt').click(function(){
       $(this).toggleClass('highlighted')
     });
+    //highlight last child
+    $('#hitIt').click(function() {
+      $('ul').each(function() {
+        $(this).children().last().toggleClass('highlighted')
+      })
+      });
+    //bold the li's
+    $('h3').click(function(){
+      $(this).siblings().toggleClass('bolded')
+    })
+    //turning the first li blue
+    $('li').click(function(){
+      $(this).siblings().first().next().toggleClass('blueIt')
+    })
 
   </script>
 
