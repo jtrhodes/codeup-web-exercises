@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Mapbox Maps API</title>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+  <script src="js/keys.js"></script>
+    <style>
+        #map {
+            width: 900px;
+            height: 900px;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<!--<script src="js/mapbox-code.js"></script>-->
+<script>
+     geocode('dogfather, san antonio, texas', accessToken).then(function(result){
+        map.setCenter(result)
+        map.setZoom(16)
+        var favRestaurant = new mapboxgl.Marker()
+            .setLngLat(result)
+            .addTo(map);
+         var restaurantPopup = new mapboxgl.Popup()
+             .setHTML("<h1>Get your piping Hot Dogs here!!</h1>");
+         favRestaurant.setPopup(restaurantPopup);
+    });
+
+
+</script>
+
+</body>
+</html>
