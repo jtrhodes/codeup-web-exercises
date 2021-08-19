@@ -3,8 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <script src="js/jQuerey.js"></script>
 </head>
 <body>
+<div id="posts"></div>
+<script>
+    $.ajax('data/blog.json').done(function(data){
+       data.forEach(function(obj){
 
+       })
+
+    });
+</script>
 </body>
 </html>
