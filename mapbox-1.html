@@ -16,6 +16,31 @@
 </head>
 <body>
 <div id="map"></div>
+<script>
+    function geocode(search, token) {
+        var baseUrl = 'https://api.mapbox.com';
+        var endPoint = '/geocoding/v5/mapbox.places/';
+        return fetch(baseUrl + endPoint + encodeURIComponent(search) + '.json' + "?" + 'access_token=' + token)
+            .then(function(res) {
+                return res.json();
+                // to get all the data from the request, comment out the following three lines...
+            }).then(function(data) {
+                return data.features[0].center;
+            });
+    }
+    function reverseGeocode(coordinates, token) {
+        var baseUrl = 'https://api.mapbox.com';
+        var endPoint = '/geocoding/v5/mapbox.places/';
+        return fetch(baseUrl + endPoint + coordinates.lng + "," + coordinates.lat + '.json' + "?" + 'access_token=' + token)
+            .then(function(res) {
+                return res.json();
+            })
+            // to get all the data from the request, comment out the following three lines...
+            .then(function(data) {
+                return data.features[0].place_name;
+            });
+    }
+</script>
 
 <script>
   var accessToken = MAPBOX_TOKEN;
@@ -27,10 +52,15 @@
     center: [-98.4916, 29.4252]
   });
   setTimeout(function(){
-      map.setStyle('mapbox://styles/mapbox/satellite-v9')
-      map.setZoom(3)
-      map.setZoom((41.850033, -87.6500523))
-  }, 5000);
+      geocode("Whitefish, montana", accessToken).then(function(result) {
+          map.setCenter(result);
+          map.setZoom(8);
+      });
+  }, 10000);
+  reverseGeocode({lng:-157.8060, lat: 21.2620}, accessToken).then(function(result){
+      console.log(result)
+  })
+  // var marker = new mapboxgl.Marker().setLngLat([-98.4861, 29.4260]).addTo(map);
 </script>
 </body>
 
