@@ -27,27 +27,5 @@ function reverseGeocode(coordinates, token) {
         style: 'mapbox://styles/mapbox/streets-v9',
         zoom: 10,
     });
-    var restaurants = [
-        {
-            name: 'dogfather' ,
-            food: 'hotdogs',
-            address:
-        }
-    ]
-function placeTheMarkers(resturaunt){
 
-}
-function markers(restaurant, map){
-        geocode(restaurant.address, accessToken).then(function(coordinates) {
-        var popup = new mapboxgl.Popup()
-            .setHTML('<h3>' + restaurant.name + '</h3><p>' + restaurant.message + '</p>');
-        new mapboxgl.Marker()
-            .setLngLat(coordinates)
-            .setPopup(popup)
-            .addTo(map);
-    });
-}
 
-select.addEventListener('change', function() {
-    map.setZoom(select.value);
-});

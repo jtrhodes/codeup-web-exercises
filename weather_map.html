@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script src='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.js'></script>
+  <link href='https://api.mapbox.com/mapbox-gl-js/v2.4.1/mapbox-gl.css' rel='stylesheet' />
+  <script src="js/jQuerey.js"></script>
+  <script src="js/keys.js"></script>
+    <link rel="stylesheet" href="css/weather_map.css">
+    <style>
+        #map{
+            width: 900px;
+            height: 900px;
+        }
+    </style>
+</head>
+<body>
+<input id="search" type="text" placeholder="Enter a name of a city">
+<button id="findIt">Find it</button>
+<div class="container">
+    <div id="content" class="card"></div>
+    <div id="content2" class="card"></div>
+    <div id="content3" class="card"></div>
+    <div id="content4" class="card"></div>
+    <div id="content5" class="card"></div>
+
+</div>
+<div id="map"></div>
+<script src="js/mapbox-code.js"></script>
+<script>
+        // var citySearch = $('#search').val()
+        // $('#findIt').click(geocode(citySearch, accessToken).then(function(result){
+        //     map.setCenter(result);
+        //     map.setZoom(8);
+        // }))
+        // geocode($('#search').val(), accessToken).then(function(result) {
+        //     map.setCenter(result);
+        //     map.setZoom(8);
+        // });
+        // var outputWeather = $(".card").html
+        // console.log(outputWeather)
+        // var inputLocation = $('#search').val()
+        // function getWeather() {
+            $.get('https://api.openweathermap.org/data/2.5/onecall', {
+                appid: WEATHER_TOKEN,
+                lat: 29.423017,
+                lon: -98.48527,
+                units: 'imperial',
+                exclude: 'minutely,alerts,hourly',
+            }).done(function(data){
+                console.log(data)
+           $('#content').append(
+               '<h1>' + data.current.dt + '</h1>',
+               '<p>' + data.current.clouds + '</<p>',
+               '<p>' + data.current.dew_points + '</p>',
+               '<p>' + data.current.dt + '</p>',
+               '<p>' + data.current.feels_like + '</p>',
+               '<p>' + data.current.humidity + '</p>',
+               '<p>' + data.current.pressure + '</p>',
+               '<p>' + data.current.sunrise + '</p>',
+               '<p>' + data.current.sunset + '</p>',
+               '<p>' + data.current.temp + '</p>',
+               '<p>' + data.current.uvi + '</p>',
+               )
+        })
+        // $.get('https://api.openweathermap.org/data/2.5/onecall', {
+        //     appid: WEATHER_TOKEN,
+        //     lat: 29.423017,
+        //     lon: -98.48527,
+        //     units: 'imperial',
+        //     exclude: 'minutely,alerts,hourly',
+        // }).done(function(data){
+        //     console.log(data)
+        //     $('#content2').append('<p>' + data.current.clouds + '</p>',
+        //         '<p>' + data.current.dew_points + '</p>',
+        //         '<p>' + data.current.dt + '</p>',
+        //         '<p>' + data.current.feels_like + '</p>',
+        //         '<p>' + data.current.humidity + '</p>',
+        //         '<p>' + data.current.pressure + '</p>',
+        //         '<p>' + data.current.sunrise + '</p>',
+        //         '<p>' + data.current.sunset + '</p>',
+        //         '<p>' + data.current.temp + '</p>',
+        //         '<p>' + data.current.uvi + '</p>',
+        //     )
+        // })
+        // $.get('https://api.openweathermap.org/data/2.5/onecall', {
+        //     appid: WEATHER_TOKEN,
+        //     lat: 29.423017,
+        //     lon: -98.48527,
+        //     units: 'imperial',
+        //     exclude: 'minutely,alerts,hourly',
+        // }).done(function(data){
+        //     console.log(data)
+        //     $('#content3').append(
+        //         '<p>' + data.current.clouds + '</p>',
+        //         '<p>' + data.current.dew_points + '</p>',
+        //         '<p>' + data.current.dt + '</p>',
+        //         '<p>' + data.current.feels_like + '</p>',
+        //         '<p>' + data.current.humidity + '</p>',
+        //         '<p>' + data.current.pressure + '</p>',
+        //         '<p>' + data.current.sunrise + '</p>',
+        //         '<p>' + data.current.sunset + '</p>',
+        //         '<p>' + data.current.temp + '</p>',
+        //         '<p>' + data.current.uvi + '</p>',
+        //     )
+        // })
+        // $.get('https://api.openweathermap.org/data/2.5/onecall', {
+        //     appid: WEATHER_TOKEN,
+        //     lat: 29.423017,
+        //     lon: -98.48527,
+        //     units: 'imperial',
+        //     exclude: 'minutely,alerts,hourly',
+        // }).done(function(data){
+        //     console.log(data)
+        //     $('#content4').append('<p>' + data.current.clouds + '</p>',
+        //         '<p>' + data.current.dew_points + '</p>',
+        //         '<p>' + data.current.dt + '</p>',
+        //         '<p>' + data.current.feels_like + '</p>',
+        //         '<p>' + data.current.humidity + '</p>',
+        //         '<p>' + data.current.pressure + '</p>',
+        //         '<p>' + data.current.sunrise + '</p>',
+        //         '<p>' + data.current.sunset + '</p>',
+        //         '<p>' + data.current.temp + '</p>',
+        //         '<p>' + data.current.uvi + '</p>',
+        //     )
+        // })
+        // $.get('https://api.openweathermap.org/data/2.5/onecall', {
+        //     appid: WEATHER_TOKEN,
+        //     lat: 29.423017,
+        //     lon: -98.48527,
+        //     units: 'imperial',
+        //     exclude: 'minutely,alerts,hourly',
+        // }).done(function(data){
+        //     console.log(data)
+        //     $('#content5').append('<p>' + data.current.clouds + '</p>',
+        //         '<p>' + data.current.dew_points + '</p>',
+        //         '<p>' + data.current.dt + '</p>',
+        //         '<p>' + data.current.feels_like + '</p>',
+        //         '<p>' + data.current.humidity + '</p>',
+        //         '<p>' + data.current.pressure + '</p>',
+        //         '<p>' + data.current.sunrise + '</p>',
+        //         '<p>' + data.current.sunset + '</p>',
+        //         '<p>' + data.current.temp + '</p>',
+        //         '<p>' + data.current.uvi + '</p>',
+        //     )
+        // })
+        // getWeather()
+</script>
+
+</body>
+</html>
