@@ -1,12 +1,15 @@
-.card {
-    width: 100px;
-    height: 100px;
-    border: 1px solid black;
-    padding: 1px;
-}
+
 container{
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: row;
+}
+
+ #map{
+     width: 900px;
+     height: 900px;
+ }
+.unique {
+    background-color: lightblue;
 }
