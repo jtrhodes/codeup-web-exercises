@@ -65,12 +65,12 @@
             exclude: 'minutely,alerts,hourly',
         }).done(function (data) {
             console.log(data)
-            console.log(data.daily[0].humidity)
             $('.cards').html('')
             for (var i = 0; i < data.daily.length -3; i++) {
-                var thisDate = new Date(data.daily[i].sunrise * 1000)
+                var thisDate = new Date(data.daily[i].dt * 1000)
+                console.log(thisDate)
                 console.log(thisDate.toUTCString())
-                $('.cards').append('<div class="card d-flex flex-grow-1 p-2 flex-wrap-nowrap">' +
+                $('.cards').append('<div class="card d-flex flex-grow-1 p-2 flex-wrap-nowrap unique">' +
                     '<h1>' + thisDate + '</h1>' +
                     '<p>Humidity: ' + data.daily[i].humidity + '</p>' +
                     '<p>Clouds: ' + data.daily[i].weather[0].description + '</p>' +
