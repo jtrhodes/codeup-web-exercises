@@ -1,6 +1,7 @@
 /*
  * Complete the TODO items below
  */
+"use strict";
 const users = [
   {
     name: 'zach',
@@ -56,7 +57,7 @@ users.forEach((user) => names.push(user.name)
 
 // TODO: replace `var` with `let` in the following declaration
 let developers = [];
-users.forEach(function(user) {
+users.forEach((user) =>{
   // TODO: rewrite the code below to use object destructuring assignment
   //       note that you can also use destructuring assignment in the function
   //       parameter definition
@@ -79,3 +80,5 @@ for(const developer of developers){
   list += '<li>' + developer + '</li>';
 };
 list += '</ul>';
+let p = document.createElement('p')
+// document.querySelector('body')[0].append(list, p)
