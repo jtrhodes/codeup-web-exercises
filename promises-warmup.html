@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<body>
+<input type="text">
+<input type="submit" value="Submit">
+<script src="js/jQuerey.js"></script>
+<script src="js/keys.js"></script>
+<script src="js/promises.js"></script>
+<script>
+  "use strict";
+
+  // returns a promise that resolves after two seconds if the UTC second is even and rejects if it is odd
+  function successIfEvenUTCSecond() {
+    return new Promise((resolve, reject) => {
+      setTimeout(function() {
+        const second = new Date().getUTCSeconds();
+        if (second % 2 === 0) {
+          resolve(second);
+        } else {
+          reject(second);
+        }
+      }, 2000);
+    });
+  }
+
+  const aPromise = successIfEvenUTCSecond();
+aPromise.then((value)=>{
+  console.log(`${value} is an even number!`);
+}).catch((value) => {
+  console.log(`${value} is an odd number!`)
+});
+  // TODO: if aPromise resolves, console.log 'VALUE_HERE is an even number!'
+  // TODO: if aPromise rejects, console.error 'VALUE_HERE is an odd number!'
+
+
+
+  /* TODO: make a GET request using fetch to the Programming Quote API url and log just the text of the random quote.
+   */
+  // const quoteUrl = `http://quotes.stormconsultancy.co.uk/random.json`;
+  //
+  // fetch(quoteUrl)
+  //         .then(response => response.json())
+  //         .then(function(data){
+  //           console.log(data.quote)
+  //         })
+
+  /* TODO: Create a new endpoint on https://hookbin.com/ and use fetch to send some POST requests.
+    Experiment with sending different shapes of data in the body of the request.
+   */
+  // const hookBinURL = 'https://hookb.in/RZ19qB9RzesNb9zzbmrG'
+  // const options = {
+  //   method: 'POST',
+  //   headers: {
+  //     'Content-Type': 'application/json',
+  //   },
+  //   body: JSON.stringify({
+  //     testing: 'successful',
+  //     results: 'Satisfactory',
+  //     happiness: 'Achieved'
+  //   }),
+  // };
+  // fetch(hookBinURL,options)
+  //         // .then(response => response.json)
+  //         .then(console.log)
+  //         .catch(console.log)
+
+</script>
+</body>
+</html>

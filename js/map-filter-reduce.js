@@ -62,7 +62,7 @@ let allNames = users.reduce((names,users,index,array)=>{
         names.push(users.name)
         return names
     }
-},[])
+},[]);
 console.log(allNames)
 // let filteredLanguages = users.map(user => user.languages)
 // console.log(filteredLanguages)
@@ -73,16 +73,16 @@ console.log(allNames)
 //         unique[totalNames] = 1
 //         return unique
 //     }
-    let uniqueUserLanguages = users.reduce(function(accumulator, user){
-        let languages = user.languages;
-        for (let i = 0; i < languages.length; i++){
-            if (!accumulator.includes(languages[i])){
-                accumulator.push(languages[i]);
-            }
-        }
-        return accumulator.sort();
-    }, []);
-    console.log(uniqueUserLanguages);
+//     let uniqueUserLanguages = users.reduce(function(accumulator, user){
+//         let languages = user.languages;
+//         for (let i = 0; i < languages.length; i++){
+//             if (!accumulator.includes(languages[i])){
+//                 accumulator.push(languages[i]);
+//             }
+//         }
+//         return accumulator.sort();
+//     }, []);
+    // console.log(uniqueUserLanguages);
     // if (!total[animal]) {
 //         total[animal] = 1;
 //     } else {
@@ -95,8 +95,8 @@ console.log(allNames)
     //     unique.push(users.languages)
     //     return unique
     // }
-},[]);
-console.log(uniqueLanguages)
+// },[]);
+// console.log(uniqueLanguages)
 
 
 
@@ -166,6 +166,16 @@ console.log('Exercise 6:');
 // REDUCE
 
 // TODO 7: using reduce, return a string containing all dog names together with no spaces ("BubblesLexieDoggy...")
+let dogString = dogs.reduce((string, dogs,index,array) =>{
+    if(index === array.length -1){
+        string += dogs.dogName
+        return string
+    }else{
+        string += dogs.dogName
+        return string
+    }
+}, '');
+console.log(dogString)
 console.log('Exercise 7:');
 
 // TODO 8: using reduce, return the total of adding all dog ages together (18)
@@ -185,6 +195,7 @@ console.log('Exercise 11:');
 
 // TODO 12: what is the average length of names of untrained dogs?
 console.log('Exercise 12:');
+
 
 // TODO 13: what are the combined ages of all dogs in dog years? (7x more than a human year)
 console.log('Exercise 13:');

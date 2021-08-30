@@ -9,11 +9,11 @@
     <link rel="stylesheet" href="css/weather_map.css">
 
 </head>
-<body>
+<body class="">
 
 <input id="search" type="text" placeholder="Enter a name of a city">
 <button id="findIt">Find it</button>
-<div class="container cards d-flex">
+<div class="container cards d-flex gx-1">
 
 
 </div>
@@ -48,9 +48,10 @@
             geocode(citySearch, MAPBOX_TOKEN).then(function(result){
                 console.log(result)
                 map.setCenter(result);
-                map.setZoom(8);
+                map.setZoom(20);
                 getWeather(result[0], result[1])
                 weatherMarker.setLngLat(result)
+                console.log(reverseGeocode(result[0],result[1]))
 
                 })
         });
@@ -70,8 +71,8 @@
                 var thisDate = new Date(data.daily[i].dt * 1000)
                 console.log(thisDate)
                 console.log(thisDate.toUTCString())
-                $('.cards').append('<div class="card d-flex flex-grow-1 p-2 flex-wrap-nowrap unique">' +
-                    '<h1>' + thisDate + '</h1>' +
+                $('.cards').append('<div class="card d-flex flex-grow-1 p-2 flex-wrap-nowrap unique mx-2">' +
+                    '<h5>' + thisDate + '</h5>' +
                     '<p>Humidity: ' + data.daily[i].humidity + '</p>' +
                     '<p>Clouds: ' + data.daily[i].weather[0].description + '</p>' +
                     '<p>Pressure: ' + data.daily[i].pressure + '</p>' +
