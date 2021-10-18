@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <script>
+    $(document).ready(function(){
+        $('#hdn-btn').click(function(e){
+            e.preventDefault();
+            $('#paragraph').toggleClass('invisible');
+        })
+    })
+  </script>
+</head>
+<body>
+<style>
+    .invisible {
+        display: none
+    }
+</style>
+<p id="paragraph">This paragraph will disappear when the button is clicked.</p>
+<button type="submit" id="hdn-btn">Hide Paragraph</button>
+</body>
+</html>
+
+
+<!--In `codeup-web-exercises`, create a new HTML file called, `frontend-warmup.html` and add the following:-->
+<!-- - a button element with an id of `hide-btn` and inner text that says-->
+<!--“Hide Paragraph.”-->
+<!-- - a paragraph with and id of `paragraph` and the inner text, ‘This paragraph will disappear when the button is clicked.’-->
+<!--Add script tags with JavaScript that will hide the paragraph when the hide button is clicked.-->
+<!--REMINDERS:-->
+<!-- - document.querySelector() selects elements just like jQuery-->
+<!-- - <DOM_NODE_HERE>.addEventListener(EVENT_TYPE, FUNCTION_HERE) is used for adding events-->
+<!--  - <DOM_NODE_HERE>.style can alter the styling of a DOM selected element-->
+<!--    - setting display to none on the paragraph will ‘hide’ it-->
+<!--    BONUS: add a functional show button-->
+<!--    Add, commit and push when finished-->
