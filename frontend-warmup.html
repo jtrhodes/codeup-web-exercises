@@ -4,23 +4,25 @@
     <script src="https://code.jquery.com/jquery-2.2.4.js" integrity="sha256-iT6Q9iMJYuQiMWNd9lDyBUStIq/8PuOW33aOqmvFpqI=" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <title>Title</title>
-  <script>
+    <style>
+        .invisible {
+            display: none
+        }
+    </style>
+</head>
+<body>
+
+<p id="paragraph">This paragraph will disappear when the button is clicked.</p>
+<button type="submit" id="hdn-btn">Hide Paragraph</button>
+<button type="submit" id=""></button>
+<script>
     $(document).ready(function(){
         $('#hdn-btn').click(function(e){
             e.preventDefault();
             $('#paragraph').toggleClass('invisible');
         })
     })
-  </script>
-</head>
-<body>
-<style>
-    .invisible {
-        display: none
-    }
-</style>
-<p id="paragraph">This paragraph will disappear when the button is clicked.</p>
-<button type="submit" id="hdn-btn">Hide Paragraph</button>
+</script>
 </body>
 </html>
 
