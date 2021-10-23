@@ -12,15 +12,15 @@
 //     - `allIndexesOf(fruits, "apple")` should return the array [0, 3]
 // - `allIndexesOf(fruits, "guava")` should return the array []
 // - `allIndexesOf(fruits, "pineapple")` should return [4]
-function allIndexOf(arr, fruit){
-    fruits.forEach(function(fruit){
-        if (fruit.indexOf(fruit) > -1) {
-            return fruit.indexOf(fruit)
-        }else{
-            return []
-        }
-    })
-}
+// function allIndexOf(arr, fruit){
+//     fruits.forEach(function(fruit){
+//         if (fruit.indexOf(fruit) > -1) {
+//             return fruit.indexOf(fruit)
+//         }else{
+//             return []
+//         }
+//     })
+// }
 
 // - Define a function named `removeAll(array, value)` that takes in two arguments.
 //     The first argument should be an array and the second argument should be a
@@ -29,7 +29,18 @@ function allIndexOf(arr, fruit){
 //     Given:
 //
 // ```js
-//     var bugs = ["mosquito", "ant", "scorpion", "ant", "ant", "mosquito", "typo", "reference error", "type error"];
+    var bugs = ["mosquito", "ant", "scorpion", "ant", "ant", "mosquito", "typo", "reference error", "type error"];
+function removeAll(array, values){
+    var newArray = []
+    array.forEach(function (value){
+        if(value != values){
+            newArray.push(value)
+        }
+    })
+    return newArray;
+}
+
+console.log(removeAll(bugs, "mosquito"))
 //     ```
 //
 //     - `removeAll(bugs, "ant")` should return `["mosquito", "scorpion",
@@ -38,9 +49,7 @@ function allIndexOf(arr, fruit){
 //       "ant", "typo", "reference error", "type error"]`
 //     - `removeAll(bugs, "roach")` should return the original array b/c "roach"
 // has no occurrances.
-//
-// ---
-//
+
 // - Make a function called randomIntBetween(min, max) that returns a random number
 // between the min and the max.
 // - Make a function called `coinFlip()` that returns either 0 or 1, randomly
