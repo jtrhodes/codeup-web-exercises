@@ -49,12 +49,31 @@ console.log(removeAll(bugs, "mosquito"))
 //       "ant", "typo", "reference error", "type error"]`
 //     - `removeAll(bugs, "roach")` should return the original array b/c "roach"
 // has no occurrances.
+function randomIntBetween(min, max){
+    return Math.floor(Math.random() * (max - min) + min);
+}
 
+console.log(randomIntBetween(5,10))
 // - Make a function called randomIntBetween(min, max) that returns a random number
 // between the min and the max.
+function coinFlip(){
+    return Math.floor(Math.random() * 2)
+}
+
+console.log(coinFlip())
 // - Make a function called `coinFlip()` that returns either 0 or 1, randomly
+function twoDice(){
+    return Math.ceil(Math.random()*6) + Math.ceil(Math.random()* 6)
+}
+
+console.log(twoDice())
 // - Make a function called `twoDice()` that returns the sum of rolling two six
 // sided dice.
+function twentySidedDie(){
+    return Math.ceil(Math.random()*20)
+}
+
+console.log(twentySidedDie())
 // - Make a function called `twentySidedDie()` that returns a random integer
 // between 1 and 20.
 // - Make a function called `twelveSidedDie()` that returns a random integer
