@@ -113,9 +113,16 @@ console.log(listOfRolls(rollDie()))
 // result of the `rollDie` function.
 // ​
 function listOfRollsFromDieFunc(numOfRolls,diceFunction){
+    var numRolls = []
+    for(var i = 0; i < numOfRolls; i++){
+        numRolls.push(diceFunction)
+    }
+    return numRolls
 }
+
+console.log(listOfRollsFromDieFunc(5,twentySidedDie()))
 // - Make a function called `listOfRollsFromDieFunc(numberOfRolls, diceFunction)`
-// ​
+//
 //     This function should take in two arguments:
 //     ​
 // - The first argument is the number of rolls you want to make.
