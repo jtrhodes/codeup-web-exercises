@@ -143,10 +143,28 @@ console.log(listOfRollsFromDieFunc(5,twentySidedDie()))
 //  */
 //
 // // Exercise 0. Write a function named first() that returns only the first element of an array
+function first(){
+    let array = [1,2,3]
+    return array[0]
+}
+
+console.log(first())
 //
 // // Exercise 1. Write a function named secondToLast() that returns the second to last element
+var testArray = [1,2,3,4,5,6,7,8,9,10]
+function secondToLast(array){
+    return array[array.length -2]
+}
+
+console.log(secondToLast(testArray))
 //
 // // Exercise 2. Write a function named rest() that takes an an array and returns an array containing everything except the first element.
+function rest(array){
+    array.shift()
+    return array
+}
+
+console.log(rest(testArray))
 //
 // // Exercise 3. Write a function named getLongestString that takes in an array of strings and returns the longest string of that array
 //
