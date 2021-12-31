@@ -167,6 +167,12 @@ function rest(array){
 console.log(rest(testArray))
 //
 // // Exercise 3. Write a function named getLongestString that takes in an array of strings and returns the longest string of that array
+var stringArray= ["jon","chuckie","the longest string"]
+function getLongestString(array){
+    array.forEach(string)
+
+
+}
 //
 // // Exercise 3.1 Write a function named getShortestString that takes in an array of strings and returns the shortest string in that array.
 //
