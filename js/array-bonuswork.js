@@ -169,14 +169,42 @@ console.log(rest(testArray))
 // // Exercise 3. Write a function named getLongestString that takes in an array of strings and returns the longest string of that array
 var stringArray= ["jon","chuckie","the longest string"]
 function getLongestString(array){
-    array.forEach(string)
-
-
+    var longString = ""
+    array.forEach(function(string){
+        if(string.length > longString.length){
+            longString = string
+        }
+    })
+    return longString
 }
+
+console.log(getLongestString(stringArray))
 //
 // // Exercise 3.1 Write a function named getShortestString that takes in an array of strings and returns the shortest string in that array.
-//
+function getShortestString(array){
+    var longString = "kjdbfskjbfkjdsbfkjsdfl"
+    array.forEach(function(string){
+        if(string.length < longString.length){
+            longString = string
+        }
+    })
+    return longString
+}
+
+console.log(getShortestString(stringArray))
 // // Exercise 4. Write a function named addTwoArrays that takes in two, one dimensional arrays. The function should return a single array containing all of the elements of the first array along with all of the elements of the second array
+function addTwoArrays(array1, array2){
+    var combinedArray = []
+    array1.forEach(function(element){
+        combinedArray.push(element)
+    })
+    array2.forEach(function(element){
+        combinedArray.push(element)
+    })
+    return combinedArray
+}
+
+console.log(addTwoArrays(testArray,stringArray))
 // // Example: addTwoArrays([1, 2, 3], [4, 5, 6]) should return [1, 2, 3, 4, 5, 6]
 //
 // // Exercise 5. Write a function named getUniqueValues that takes in an array and returns the array without any duplicates
