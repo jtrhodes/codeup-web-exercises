@@ -209,11 +209,41 @@ console.log(addTwoArrays(testArray,stringArray))
 //
 // // Exercise 5. Write a function named getUniqueValues that takes in an array and returns the array without any duplicates
 // // Example: getUniqueValues(["a", "b", "a", "b", "c", "c"]) should return ["a", "b", "c"]
+function getUniqueValues(array){
+    var newArray = []
+    array.forEach(function(element){
+        if((!newArray.includes(element))){
+            newArray.push(element)
+        }
+    })
+    return newArray
+}
+
+console.log(getUniqueValues(fruits))
+console.log(getUniqueValues(bugs))
 //
 // // Exercise 6. Write a function named reverseArray that takes in an array and returns it reversed, but without altering the original array.
-//
+function reverseArray(array){
+    var reversedArray = array.reverse()
+    return reversedArray
+}
+
+console.log(reverseArray(testArray))
 // // Exercies 7. Write a function named getRandomQuote().
 // //   Inside of the function, create an array of strings where each string is a quote or thought you find inspirational
+function getRandomQuote(){
+    var favoriteQuotes = ["first quote", "second quote", "third quote", "fourth quote", "fifth quote"]
+    var randomNumber = Math.floor(Math.random() * 5)
+    var quote
+    favoriteQuotes.forEach(function(element, position){
+        if(position === randomNumber){
+            quote = element
+        }
+    })
+    return quote
+}
+
+console.log(getRandomQuote())
 // //   getRandomQuote should generate a random number between 0 and the array's length minus 1
 // //   use the randomly generated number as your index
 // //   return a random quote.
@@ -224,6 +254,9 @@ console.log(addTwoArrays(testArray,stringArray))
 // // getIndexesOf() should return an array containing all of the indexes of that character in the string
 // // Example: getIndexesOf("a", "banana") should return the array [1, 3, 5]
 // // Example: getIndexesOf("z", "banana") should return an empty array [] since there are no "z" characters in "banana"
+function getIndexsOf(target, string){
+
+}
 //
 // // Exercise 9. Write a function named removeAll.
 // // It should accept an array and a value
