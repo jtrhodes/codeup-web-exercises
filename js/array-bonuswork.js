@@ -254,9 +254,19 @@ console.log(getRandomQuote())
 // // getIndexesOf() should return an array containing all of the indexes of that character in the string
 // // Example: getIndexesOf("a", "banana") should return the array [1, 3, 5]
 // // Example: getIndexesOf("z", "banana") should return an empty array [] since there are no "z" characters in "banana"
+let thisString = "jthidesktedk"
 function getIndexsOf(target, string){
-
+    let indexes = []
+    for(let i = 0; i < string.length; i++){
+        console.log(i)
+        if(string.indexOf(i) == target){
+            indexes.pop(i)
+        }
+    }
+    return indexes
 }
+
+console.log(getIndexsOf("k", thisString))
 //
 // // Exercise 9. Write a function named removeAll.
 // // It should accept an array and a value
@@ -273,6 +283,9 @@ function getIndexsOf(target, string){
 // // Exercise 12. Write a function named moveFirstToLast() that takes in an array
 // // the function should return the array with the first element at the end
 // // Example: moveFirstToLast([1, 2, 3, 4]) should return [2, 3, 4, 1]
+function moveFirstToLast(array){
+
+}
 //
 //
 // // Exercise 13. Write a function named zip() that takes in two arrays with the same number of elements
@@ -280,6 +293,7 @@ function getIndexsOf(target, string){
 // // Example: zip([1, 2, 3], [4, 5, 6]) returns [[1, 4], [2, 5], [3, 6])
 // // Example: zip(["a", "b", "c"], ["x", "y", "z"]) returns [["a", "x"], ["b", "y"], ["c", "z"]]
 // ```
+
 
 
 //
@@ -298,3 +312,21 @@ function getIndexsOf(target, string){
 //     – var arr1 = ['bob', 1, true, 1, 2];
 //     – var arr2 = [2, null, undefined, 0, 2, "apple"]
 //     – exampleFunction(arr1, arr2) // returns true
+var numArray = [1, 2, 3, 4, 5, 6, 7, 8, 9, 0]
+function createPhoneNumber(numbers){
+    let phoneNumber = "("
+    numbers.forEach(function(number){
+        if(phoneNumber.length == 4){
+            phoneNumber = phoneNumber +") "
+        }if(phoneNumber.length == 9){
+            phoneNumber = phoneNumber + "-" + number
+        }else{
+            phoneNumber = phoneNumber + number
+        }
+    })
+    return phoneNumber
+}
+
+console.log(createPhoneNumber(numArray))
+
+console.log()
