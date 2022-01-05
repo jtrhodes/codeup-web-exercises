@@ -328,5 +328,60 @@ function createPhoneNumber(numbers){
 }
 
 console.log(createPhoneNumber(numArray))
+function filter_list(l) {
+    // Return a new array with the strings filtered out
+    let filtered = l.filter((name) => typeof name === 'number')
+    return filtered
+}
+console.log(filter_list(testArray))
 
-console.log()
+function squareDigits(num) {
+    //separate the #'s into single digit
+    //square each individual number
+    //return one line that contains the square of each individual nuber
+    let numArray = num.toString().split("");
+    console.log(numArray);
+    let squareNum = "";
+    numArray.forEach(function (digit){
+        squareNum += "" + Math.pow(parseInt(digit), 2);
+    });
+    return parseInt(squareNum);
+}
+
+console.log(squareDigits(93));
+
+var userObjs = [
+    {
+        isAdmin: true,
+        email: 'user1@email.com'
+    },
+    {
+        isAdmin: true,
+        email: 'user2@email.com'
+    },
+    {
+        isAdmin: false,
+        email: 'user3@email.com'
+    }
+]
+// Write a function, `adminList()` that takes in an array of user objects and
+// returns a count of all admins based on the `isAdmin` property.
+// Refactor to
+// return an array of admin-only user emails.
+
+function adminList(array){
+    let count = 0;
+    let adminEmails = [];
+    let adminUsers = []
+    array.forEach(function (user){
+        if(user.isAdmin == true){
+            count++
+            adminEmails.push(user.email)
+            adminUsers.push(user)
+        }
+    });
+    return count+ " list of admins " +adminEmails
+
+}
+
+console.log(adminList(userObjs));
