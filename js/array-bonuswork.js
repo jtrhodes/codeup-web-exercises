@@ -330,8 +330,19 @@ function alphabetNumber(letter){
     return position
 }
 
-console.log(alphabetNumber('u'))
+console.log(alphabetNumber('d'))
 // 4.  Create a function that returns the longest string in a given array of string elements.
+function longest(array){
+    let longString = ""
+    array.forEach(function(element){
+        if(element.length > longString.length){
+            longString = element
+        }
+    })
+    return longString
+}
+
+console.log(longest(bugs))
 // 5.   Create a function that takes in two arrays of elements, including numbers. If all numbers added together in the first array is equal to all the number inputs added in the second array, return true, otherwise, false. Only add together numeric elements but either array may contain non-numeric elements.
 //     – var arr1 = ['bob', 1, true, 1, 2];
 //     – var arr2 = [2, null, undefined, 0, 2, "apple"]
