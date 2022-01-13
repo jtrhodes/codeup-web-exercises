@@ -152,6 +152,8 @@ console.log(first())
 //
 // // Exercise 1. Write a function named secondToLast() that returns the second to last element
 var testArray = [1,2,3,4,5,6,7,8,9,10]
+var testsArray = [1,2,3,4,5,6,7,8,9]
+
 function secondToLast(array){
     return array[array.length -2]
 }
@@ -344,6 +346,27 @@ function longest(array){
 
 console.log(longest(bugs))
 // 5.   Create a function that takes in two arrays of elements, including numbers. If all numbers added together in the first array is equal to all the number inputs added in the second array, return true, otherwise, false. Only add together numeric elements but either array may contain non-numeric elements.
+function addTwoArrays(array1, array2){
+    let arrayOneTotal = 0
+    let arrayTwoTotal = 0
+    array1.forEach(function(element){
+        if(typeof element === 'number') {
+            arrayOneTotal +=  parseInt(element)
+        }
+    })
+    array2.forEach(function(element){
+        if(typeof element === 'number'){
+         arrayTwoTotal += parseInt(element)
+        }
+    })
+    if(arrayTwoTotal === arrayOneTotal) {
+        return true
+    }else{
+        return false
+    }
+}
+
+console.log(addTwoArrays(testArray,testArray))
 //     – var arr1 = ['bob', 1, true, 1, 2];
 //     – var arr2 = [2, null, undefined, 0, 2, "apple"]
 //     – exampleFunction(arr1, arr2) // returns true
