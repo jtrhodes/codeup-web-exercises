@@ -142,13 +142,16 @@ const dogs = [
 // MAP
 
 // TODO 1: using map, create a new array of dog names from the dogs array
-console.log('Exercise 1:');
-
+let dogNamesArray = dogs.map(dogs => dogs.dogName)
+console.log(dogNamesArray);
+console.log('Exercise 1:')
 // TODO 2: using map, create a new array of dog ages from the dogs array
 console.log('Exercise 2:');
-
+let dogAgesArray = dogs.map(dogs => dogs.age)
+console.log(dogAgesArray)
 // TODO 3: using map, create a new array of dog objects from the dogs array that only have dog names and age properties and values
 console.log('Exercise 3:');
+
 
 
 // FILTER

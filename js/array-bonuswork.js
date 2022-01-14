@@ -294,8 +294,14 @@ function moveFirstToLast(array){
 // // Zip returns a new array of arrays where each element is an array of the two elements at the same index
 // // Example: zip([1, 2, 3], [4, 5, 6]) returns [[1, 4], [2, 5], [3, 6])
 // // Example: zip(["a", "b", "c"], ["x", "y", "z"]) returns [["a", "x"], ["b", "y"], ["c", "z"]]
-// ```
+var letterArray = ['b', 'd','f']
+var numArray = [1,3,5]
+function zip(array1,array2){
+    var newArray = array1.map((e, i) => e + array2[i])
+    return newArray
+}
 
+console.log(zip(letterArray,numArray))
 
 
 //
@@ -346,7 +352,7 @@ function longest(array){
 
 console.log(longest(bugs))
 // 5.   Create a function that takes in two arrays of elements, including numbers. If all numbers added together in the first array is equal to all the number inputs added in the second array, return true, otherwise, false. Only add together numeric elements but either array may contain non-numeric elements.
-function addTwoArrays(array1, array2){
+function twoTotalsEqual(array1, array2){
     let arrayOneTotal = 0
     let arrayTwoTotal = 0
     array1.forEach(function(element){
@@ -366,7 +372,7 @@ function addTwoArrays(array1, array2){
     }
 }
 
-console.log(addTwoArrays(testArray,testArray))
+console.log(twoTotalsEqual(testArray,testArray))
 //     – var arr1 = ['bob', 1, true, 1, 2];
 //     – var arr2 = [2, null, undefined, 0, 2, "apple"]
 //     – exampleFunction(arr1, arr2) // returns true
