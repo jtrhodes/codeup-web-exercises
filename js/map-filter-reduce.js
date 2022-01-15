@@ -151,6 +151,8 @@ let dogAgesArray = dogs.map(dogs => dogs.age)
 console.log(dogAgesArray)
 // TODO 3: using map, create a new array of dog objects from the dogs array that only have dog names and age properties and values
 console.log('Exercise 3:');
+let dogNamesAndAges = dogs.map(dogs => dogs.age + dogs.dogName)
+console.log(dogNamesAndAges)
 
 
 
@@ -161,7 +163,9 @@ console.log('Exercise 4:');
 
 // TODO 5: using filter, create a new array containing only dogs named 'Lexie'
 console.log('Exercise 5:');
+const dogLexie = dogs.filter(dogs => dogs.dogName === 'Lexie')
 
+console.log(dogLexie)
 // TODO 6: using filter, create a new array containing only dogs that are trained and younger than 10
 console.log('Exercise 6:');
 
