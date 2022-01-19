@@ -168,8 +168,8 @@ const dogLexie = dogs.filter(dogs => dogs.dogName === 'Lexie')
 console.log(dogLexie)
 // TODO 6: using filter, create a new array containing only dogs that are trained and younger than 10
 console.log('Exercise 6:');
-
-
+const trainerOlderDogs = dogs.filter(dogs => dogs.age >= 10 && dogs.isTrained === true)
+console.log(trainerOlderDogs)
 // REDUCE
 
 // TODO 7: using reduce, return a string containing all dog names together with no spaces ("BubblesLexieDoggy...")
