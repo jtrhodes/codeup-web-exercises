@@ -11,7 +11,7 @@ function printAll(arr){
     })
 }
 printAll(['hello', 'hi', 'greetings']);
-
+var array = ['hello', 'hi', 'greetings']
 // javascript
 // 	printAll(['hello', 'hi', 'greetings']);
 	/*
@@ -44,28 +44,47 @@ function getOccurences(str, letter){
 
 
 // 1. Create a function, `getLongestString`, that takes in an array of strings and returns the longest string. If the two longest words are equal in length, return the last to appear in the array.
+function getLongestString(arr){
+	let longest = ""
+	arr.forEach(function(element){
+		if(element.length > longest.length){
+			longest = element
+		}
+	})
+	return longest
+}
 
-    ```javascript
-	getLongestString(['hello', 'hi', 'greetings']); // returns 'greetings'
-	getLongestString(['hello', 'world', '!' ]); // returns 'world'
-	```
+console.log(getLongestString(array))
+    // ```javascript
+	// getLongestString(['hello', 'hi', 'greetings']); // returns 'greetings'
+	// getLongestString(['hello', 'world', '!' ]); // returns 'world'
+	// ```
 
 // 1. Create a function, `getFirstLetter`, that takes an array of strings and returns an array of the first letter of each string.
+function getFirstLetter(arr){
+	let firstLetters = []
+	arr.forEach(function(element){
+		firstLetters.push(element)
+	})
+	return firstLetters
+}
 
-    ```javascript
-	getFirstLetter(['hello', 'hi', 'greetings']); // returns ['h','h','g']
-	getFirstLetter(['hello', 'world', '!' ]); // returns ['h','w','!']
-	```
+console.log(getFirstLetter(array))
+
+    // ```javascript
+	// getFirstLetter(['hello', 'hi', 'greetings']); // returns ['h','h','g']
+	// getFirstLetter(['hello', 'world', '!' ]); // returns ['h','w','!']
+	// ```
 
 // 1. Create a function, `arrayEndsWith`, that takes two arguments, an array and a shorter array, and returns a boolean whether or not the larger array ends with the same elements as the passed second array elements. The function should return true if the second array elements are at the end of the first array. Assume that neither array will be empty, contain only string, number, or boolean elements and that the length of the second array will always be shorter than the first.
 
-    ```javascript
-	arrayEndsWith(['hi', 'hello', 'world', true, 3, 5], [3, 5]); // returns true
-	arrayEndsWith(['hi', 'hello', 'world', true, 3, 5], [3, 9]); // returns false
-	arrayEndsWith(['hi', 'hmmm'], ['hmmm']); // returns true
-	arrayEndsWith([1, 2, 3], [2, 3]); // returns true
-	arrayEndsWith([1, 2, 3], [3, 2]); // returns false
-	```
+    // ```javascript
+	// arrayEndsWith(['hi', 'hello', 'world', true, 3, 5], [3, 5]); // returns true
+	// arrayEndsWith(['hi', 'hello', 'world', true, 3, 5], [3, 9]); // returns false
+	// arrayEndsWith(['hi', 'hmmm'], ['hmmm']); // returns true
+	// arrayEndsWith([1, 2, 3], [2, 3]); // returns true
+	// arrayEndsWith([1, 2, 3], [3, 2]); // returns false
+	// ```
 //
 // 1. Create a function, `numsToObject`, that takes in three number inputs and returns them as property values `num1`, `num2`, and `num3` on an object.
 
