@@ -61,15 +61,17 @@ console.log(getLongestString(array))
 	// ```
 
 // 1. Create a function, `getFirstLetter`, that takes an array of strings and returns an array of the first letter of each string.
-function getFirstLetter(arr){
-	let firstLetters = []
-	arr.forEach(function(element){
-		firstLetters.push(element)
-	})
-	return firstLetters
-}
-
-console.log(getFirstLetter(array))
+// function getFirstLetter(arr){
+// 	let firstLetters = []
+// 	arr.forEach(function(element){
+// 		for(let i = 0,i < element.length, i++){
+// 			if(i)
+// 		}
+// 	})
+// 	return firstLetters
+// }
+//
+// console.log(getFirstLetter(array))
 
     // ```javascript
 	// getFirstLetter(['hello', 'hi', 'greetings']); // returns ['h','h','g']
@@ -88,35 +90,35 @@ console.log(getFirstLetter(array))
 //
 // 1. Create a function, `numsToObject`, that takes in three number inputs and returns them as property values `num1`, `num2`, and `num3` on an object.
 
-    ```javascript
-	numsToObject(4, 5, 6); // returns {num1: 4, num2: 5, num3: 6}
-	numsToObject(1, 2, 3); // returns {num1: 1, num2: 2, num3: 3}
-	numsToObject(0, 199, 34); // returns {num1: 0, num2: 199, num3: 34}
-	```
+    // ```javascript
+	// numsToObject(4, 5, 6); // returns {num1: 4, num2: 5, num3: 6}
+	// numsToObject(1, 2, 3); // returns {num1: 1, num2: 2, num3: 3}
+	// numsToObject(0, 199, 34); // returns {num1: 0, num2: 199, num3: 34}
+	// ```
 
 // 1. Create a function, `removeNums`, that takes in an array of data types and returns an array of the same elements except for any number data types. Numeric strings do not count as a number but NaN does.
 
-    ```javascript
-	removeNums(['a', true, null, [], {}, 4, '5', NaN]) // returns ['a', true, null, [], {}, '5']
-	removeNums(['a', 'b', 'c']) // returns ['a', true, null, [], {}, '5']
-	```
+    // ```javascript
+	// removeNums(['a', true, null, [], {}, 4, '5', NaN]) // returns ['a', true, null, [], {}, '5']
+	// removeNums(['a', 'b', 'c']) // returns ['a', true, null, [], {}, '5']
+	// ```
 
 // 1. Create a function, `objectToSum`, that takes in an object, and returns the sum of any number property values (numeric strings will not be added). Expect that no object property values will be NaN. If no number properties are present, return 0.
 
-    ```javascript
-	objectToSum({prop1: 'bob', prop2: true, prop3: 5}) // returns 5
-	objectToSum({a: '3', b: true, c: 5, d: 3}) // returns 8
-	objectToSum({foo: 'one', bar: 'two'}) // returns 0
-	```
+    // ```javascript
+	// objectToSum({prop1: 'bob', prop2: true, prop3: 5}) // returns 5
+	// objectToSum({a: '3', b: true, c: 5, d: 3}) // returns 8
+	// objectToSum({foo: 'one', bar: 'two'}) // returns 0
+	// ```
 
 // 1. Create a function, `objToObj`, that takes in an object with only property values of a string type and returns another object with a single property called 'all' with a value of all input object properties values concatenated together.
 //
 // ***Please note that the order of object properties is uncertain and concatenating the object property values will be unpredictable. This is fine.***
 
-```javascript
-	objToObj({foo: 'hello', bar:'world'}) // returns {all: 'helloworld'} or {all: 'worldhello'}
-	objToObj({a: 'codeup', b:'rocks'}) // returns {all: 'rockscodeup'} or {all: 'codeuprocks'}
-	```
+// ```javascript
+// 	objToObj({foo: 'hello', bar:'world'}) // returns {all: 'helloworld'} or {all: 'worldhello'}
+// 	objToObj({a: 'codeup', b:'rocks'}) // returns {all: 'rockscodeup'} or {all: 'codeuprocks'}
+// 	```
 //
 // 1. Create a function, `getStringDeets`, that takes in a string and returns an object with specific properties containing information about the string, namely:
 
@@ -125,22 +127,22 @@ console.log(getFirstLetter(array))
 // - `length`- containing the length of characters of the string
 // - `shoutedVersion` - containing an all caps version of the string
 
-    ```javascript
-	getStringDeets("apple"); // returns...
-	/* 
-	  {
-	    firstChar: "a",
-	    lastChar: "e",
-	    length: 5,
-	    shoutedVersion: "APPLE"
-	  }
-	*/
-	```
+    // ```javascript
+	// getStringDeets("apple"); // returns...
+	// /*
+	//   {
+	//     firstChar: "a",
+	//     lastChar: "e",
+	//     length: 5,
+	//     shoutedVersion: "APPLE"
+	//   }
+	// */
+	// ```
 
 // 1. Create a function, `createUsersObject`, that takes in two arrays: the first array is an array of strings (usernames), the second is an array of numbers (user ages). The function should return an object with property names matching to the first array elements paired with property values matching the second  array elements. Assume both arrays are the same length.
 
-    ```javascript
-	var usernames = ['cindy', 'fred', 'cathy'];
-	var ages = [34, 22, 45];
-	createUsersObject(usernames, ages) // returns {cindy: 34, fred: 22, cathy: 45}
-	```
+    // ```javascript
+	// var usernames = ['cindy', 'fred', 'cathy'];
+	// var ages = [34, 22, 45];
+	// createUsersObject(usernames, ages) // returns {cindy: 34, fred: 22, cathy: 45}
+	// ```

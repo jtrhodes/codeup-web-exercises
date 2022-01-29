@@ -142,9 +142,9 @@ const dogs = [
 // MAP
 
 // TODO 1: using map, create a new array of dog names from the dogs array
+console.log('Exercise 1:')
 let dogNamesArray = dogs.map(dogs => dogs.dogName)
 console.log(dogNamesArray);
-console.log('Exercise 1:')
 // TODO 2: using map, create a new array of dog ages from the dogs array
 console.log('Exercise 2:');
 let dogAgesArray = dogs.map(dogs => dogs.age)
@@ -160,7 +160,8 @@ console.log(dogNamesAndAges)
 
 // TODO 4: using filter, create a new array containing only dogs younger than 10 years old
 console.log('Exercise 4:');
-
+const youngDogs = dogs.filter(dogs => dogs.age < 10);
+console.log(youngDogs)
 // TODO 5: using filter, create a new array containing only dogs named 'Lexie'
 console.log('Exercise 5:');
 const dogLexie = dogs.filter(dogs => dogs.dogName === 'Lexie')
@@ -168,11 +169,12 @@ const dogLexie = dogs.filter(dogs => dogs.dogName === 'Lexie')
 console.log(dogLexie)
 // TODO 6: using filter, create a new array containing only dogs that are trained and younger than 10
 console.log('Exercise 6:');
-const trainerOlderDogs = dogs.filter(dogs => dogs.age >= 10 && dogs.isTrained === true)
+const trainerOlderDogs = dogs.filter(dogs => dogs.age <= 10 && dogs.isTrained === true)
 console.log(trainerOlderDogs)
 // REDUCE
 
 // TODO 7: using reduce, return a string containing all dog names together with no spaces ("BubblesLexieDoggy...")
+console.log('Exercise 7:');
 let dogString = dogs.reduce((string, dogs,index,array) =>{
     if(index === array.length -1){
         string += dogs.dogName
@@ -183,10 +185,16 @@ let dogString = dogs.reduce((string, dogs,index,array) =>{
     }
 }, '');
 console.log(dogString)
-console.log('Exercise 7:');
+
 
 // TODO 8: using reduce, return the total of adding all dog ages together (18)
 console.log('Exercise 8:');
+let totalAge = dogs.reduce((total, dogs, index, array) =>{
+    total += dogs.age
+    return total
+}, 0);
+console.log(totalAge)
+
 
 // TODO 9: using reduce, return an array of dog objects with all isTrained properties set to true
 console.log('Exercise 9:');
