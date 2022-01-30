@@ -235,7 +235,11 @@ console.log(nameLength)
 
 // TODO 13: what are the combined ages of all dogs in dog years? (7x more than a human year)
 console.log('Exercise 13:');
-
+let dogYears = dogs.reduce((age,dogs)=>{
+        age += dogs.age
+    return age
+},0) * 7;
+console.log(dogYears)
 // TODO 14: create a string of the first letters of each dog name for dogs three years old (should be "LF")
 console.log('Exercise 14:');
 
