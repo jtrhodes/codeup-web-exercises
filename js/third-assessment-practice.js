@@ -34,9 +34,15 @@ console.log(getLowestNumber([23,47,50,5]))
 
 //
 // 1. Create a function, `getOccurrences`, that that takes in two arguments, a string and a letter. The function will count the number of occurrences of the specified letter within the string and return that number. The function should recognize case for instances (e.g. 'M' does not equal 'm').
-function getOccurences(str, letter){
 
+function getOccurences(str, letter){
+	let strSearch = letter
+	for(var i=count=0; i<str.length; count+=+(strSearch===str[i++]));
+	return count
 }
+
+console.log(getOccurences('iknowasongthatgetsoneverybodiesnerves',"e"))
+
 // javascript
 // 	getOccurrences('hello', 'l'); // returns 2
 // 	getOccurrences('mississippi', 's'); // returns 4
@@ -72,6 +78,15 @@ console.log(getLongestString(array))
 // }
 //
 // console.log(getFirstLetter(array))
+function getFirstLetter(array){
+	let firstLetterArray = []
+	array.forEach((element)=>{
+		firstLetterArray.push(element.charAt(0))
+	})
+	return firstLetterArray
+}
+
+console.log(getFirstLetter(['hello', 'world', '!' ]))
 
     // ```javascript
 	// getFirstLetter(['hello', 'hi', 'greetings']); // returns ['h','h','g']
@@ -79,7 +94,9 @@ console.log(getLongestString(array))
 	// ```
 
 // 1. Create a function, `arrayEndsWith`, that takes two arguments, an array and a shorter array, and returns a boolean whether or not the larger array ends with the same elements as the passed second array elements. The function should return true if the second array elements are at the end of the first array. Assume that neither array will be empty, contain only string, number, or boolean elements and that the length of the second array will always be shorter than the first.
+function arrayEndsWith(arr1,arr2){
 
+}
     // ```javascript
 	// arrayEndsWith(['hi', 'hello', 'world', true, 3, 5], [3, 5]); // returns true
 	// arrayEndsWith(['hi', 'hello', 'world', true, 3, 5], [3, 9]); // returns false
@@ -89,7 +106,15 @@ console.log(getLongestString(array))
 	// ```
 //
 // 1. Create a function, `numsToObject`, that takes in three number inputs and returns them as property values `num1`, `num2`, and `num3` on an object.
+function numsToObject(number1,number2,number3){
+	let object1 = {num1: 0,num2: 0,num3: 0}
+	object1.num1 = number1
+	object1.num2 = number2
+	object1.num3 = number3
+	return object1
+}
 
+console.log(numsToObject(56,85,2734))
     // ```javascript
 	// numsToObject(4, 5, 6); // returns {num1: 4, num2: 5, num3: 6}
 	// numsToObject(1, 2, 3); // returns {num1: 1, num2: 2, num3: 3}
@@ -97,14 +122,26 @@ console.log(getLongestString(array))
 	// ```
 
 // 1. Create a function, `removeNums`, that takes in an array of data types and returns an array of the same elements except for any number data types. Numeric strings do not count as a number but NaN does.
+function removeNums(array){
+	let noNumbers = []
+	array.forEach(element =>{
+		if(typeof element !== Number){
+			noNumbers.push(element)
+		}
+	})
+	return noNumbers
+}
 
+console.log(removeNums(['a', true, null, [], {}, 4, '5', NaN]))
     // ```javascript
 	// removeNums(['a', true, null, [], {}, 4, '5', NaN]) // returns ['a', true, null, [], {}, '5']
 	// removeNums(['a', 'b', 'c']) // returns ['a', true, null, [], {}, '5']
 	// ```
 
 // 1. Create a function, `objectToSum`, that takes in an object, and returns the sum of any number property values (numeric strings will not be added). Expect that no object property values will be NaN. If no number properties are present, return 0.
-
+function objectToSum(object){
+	
+}
     // ```javascript
 	// objectToSum({prop1: 'bob', prop2: true, prop3: 5}) // returns 5
 	// objectToSum({a: '3', b: true, c: 5, d: 3}) // returns 8
