@@ -124,8 +124,8 @@ console.log(numsToObject(56,85,2734))
 // 1. Create a function, `removeNums`, that takes in an array of data types and returns an array of the same elements except for any number data types. Numeric strings do not count as a number but NaN does.
 function removeNums(array){
 	let noNumbers = []
-	array.forEach(element =>{
-		if(typeof element !== Number){
+	array.forEach((element) =>{
+		if(typeof element !== 'number'){
 			noNumbers.push(element)
 		}
 	})
@@ -140,8 +140,23 @@ console.log(removeNums(['a', true, null, [], {}, 4, '5', NaN]))
 
 // 1. Create a function, `objectToSum`, that takes in an object, and returns the sum of any number property values (numeric strings will not be added). Expect that no object property values will be NaN. If no number properties are present, return 0.
 function objectToSum(object){
-	
+	let sum = 0;
+	Object.values(object).forEach((val)=> {
+		if (typeof val == 'number') {
+			sum += val
+		}
+	})
+	// for (const property in object) {
+	// 	if(typeof `${object[property]}` !== 'number'){
+	// 		console.log('this aint workin')
+	// 	}else{
+	// 		sum+= `${object[property]}`
+	// 	}
+	// }
+	return sum
 }
+
+console.log(objectToSum({a: '3', b: true, c: 5, d: 3}))
     // ```javascript
 	// objectToSum({prop1: 'bob', prop2: true, prop3: 5}) // returns 5
 	// objectToSum({a: '3', b: true, c: 5, d: 3}) // returns 8
@@ -149,7 +164,15 @@ function objectToSum(object){
 	// ```
 
 // 1. Create a function, `objToObj`, that takes in an object with only property values of a string type and returns another object with a single property called 'all' with a value of all input object properties values concatenated together.
-//
+function objToObj(object){
+	let allObj = {all: ''};
+	for (const property in object) {
+			allObj.all += `${object[property]}`
+	}
+	return allObj.all
+}
+
+console.log(objToObj({foo: 'hello', bar:'world'}))
 // ***Please note that the order of object properties is uncertain and concatenating the object property values will be unpredictable. This is fine.***
 
 // ```javascript
@@ -158,7 +181,16 @@ function objectToSum(object){
 // 	```
 //
 // 1. Create a function, `getStringDeets`, that takes in a string and returns an object with specific properties containing information about the string, namely:
+function getStringDeets(str){
+	let strDeets = {firstChar: '',lastChar: '',length: 0,shoutedVersion: ''}
+	strDeets.firstChar = str.charAt(0);
+	strDeets.lastChar = str.charAt(str.length-1);
+	strDeets.length = str.length;
+	strDeets.shoutedVersion = str.toUpperCase()
+	return strDeets
+}
 
+console.log(getStringDeets('apple'))
 // - `firstChar` -  containing the first character of the string
 // - `lastChar` - containing the last character of the string
 // - `length`- containing the length of characters of the string
@@ -177,9 +209,18 @@ function objectToSum(object){
 	// ```
 
 // 1. Create a function, `createUsersObject`, that takes in two arrays: the first array is an array of strings (usernames), the second is an array of numbers (user ages). The function should return an object with property names matching to the first array elements paired with property values matching the second  array elements. Assume both arrays are the same length.
+function createUserObject(arr1,arr2) {
+	var result = arr2.reduce(function (result, field, index) {
+		result[arr1[index]] = field;
+		return result;
+	}, {})
+	return result
+}
+
 
     // ```javascript
-	// var usernames = ['cindy', 'fred', 'cathy'];
-	// var ages = [34, 22, 45];
+	var usernames = ['cindy', 'fred', 'cathy'];
+	var ages = [34, 22, 45];
+console.log(createUserObject(usernames, ages))
 	// createUsersObject(usernames, ages) // returns {cindy: 34, fred: 22, cathy: 45}
 	// ```
