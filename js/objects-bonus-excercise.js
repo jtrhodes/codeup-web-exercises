@@ -949,26 +949,35 @@ console.log(getEmployeeCount(salesReport))
 
 // Exercise 5. Create an object named profileReport and add the following methods that use the "profiles" JSON data.
 var profileReport = {}
-function getProfileCount(arr){
-    return arr.length
+function getProfileCount(){
+    profileReport.profileCount = profiles.length
 }
-function getActiveCount(arr){
+function getActiveCount(){
     let count = 0
-    arr.forEach((e)=>{if(e.isActive){count++}})
-    return count
+    profiles.forEach((e)=>{if(e.isActive){count++}});
+    profileReport.activeCount = count;
 }
-function getInactiveCount(arr){
+function getInactiveCount(){
     let count = 0;
-    arr.forEach((e)=>{if(!e.isActive){count++}})
-    return count
+    profiles.forEach((e)=>{if(!e.isActive){count++}});
+    profileReport.inactiveCount = count;
 }
-function sumOfAllBalances(arr){
-
+function sumOfAllBalances(){
+    let total = 0;
+    profiles.forEach(e=> total += parseFloat(e.balance))
+    profileReport.sumOfBalances = total;
 }
-
-console.log(getInactiveCount(profiles))
-console.log(getProfileCount(profiles))
-console.log(getActiveCount(profiles))
+function getAverageBalance(){
+    let total = 0;
+    profiles.forEach(e=> total += parseInt(profiles.balance))
+    profileReport.averageBalances = total / profiles.length;
+}
+sumOfAllBalances()
+getInactiveCount()
+getProfileCount()
+getActiveCount()
+sumOfAllBalances()
+console.log(profileReport)
 //  getProfileCount() should return the total number of profiles
 //  getActiveCount() should return the number of active profiles
 //  getInactiveCount() should return the number of inactive profiles
