@@ -964,19 +964,48 @@ function getInactiveCount(){
 }
 function sumOfAllBalances(){
     let total = 0;
-    profiles.forEach(e=> total += parseFloat(e.balance))
-    profileReport.sumOfBalances = total;
+    profiles.forEach((e)=>{
+        total += parseFloat(e.balance.slice(1,e.balance.length).replace(',',''))
+    })
+    profileReport.sumOfBalances = total
 }
 function getAverageBalance(){
     let total = 0;
-    profiles.forEach(e=> total += parseInt(profiles.balance))
-    profileReport.averageBalances = total / profiles.length;
+    profiles.forEach(e=>  total += parseInt(e.balance.slice(1,e.balance.length).replace(',','')))
+    profileReport.averageBalances = (total / profiles.length).toFixed(2)
 }
-sumOfAllBalances()
+function getLowestBalance(){
+    let lowest = 100000;
+    let name = '';
+    profiles.forEach((e)=>{
+        if(parseInt(e.balance.slice(1,e.balance.length).replace(',',''))< lowest){
+            lowest = parseInt(e.balance.slice(1,e.balance.length).replace(',',''))
+            name = e.name
+        }
+    })
+    profileReport.lowestBalance = name;
+}
+function getHighestBalance(){
+    let highest = 0
+    let name = '';
+    profiles.forEach((e)=>{
+        if(parseInt(e.balance.slice(1,e.balance.length).replace(',',''))> highest){
+            highest = parseInt(e.balance.slice(1,e.balance.length).replace(',',''))
+            name = e.name
+        }
+    })
+    profileReport.highestBalance = name;
+}
+function getMostFavoriteFruit(){
+
+}
+getHighestBalance()
+getAverageBalance()
 getInactiveCount()
 getProfileCount()
 getActiveCount()
 sumOfAllBalances()
+getLowestBalance()
 console.log(profileReport)
 //  getProfileCount() should return the total number of profiles
 //  getActiveCount() should return the number of active profiles
