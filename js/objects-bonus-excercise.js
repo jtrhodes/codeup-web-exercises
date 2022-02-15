@@ -996,9 +996,16 @@ function getHighestBalance(){
     })
     profileReport.highestBalance = name;
 }
-function getMostFavoriteFruit(){
-
+function getTotalNumberUnreadMessages(){
+    let total = 0
+    let messages = 0
+    profiles.forEach((e)=>{
+        total += parseInt(e.greeting.match(/\d+/g));
+    })
+    console.log(total)
+    profileReport.totalUnreadMessages = total;
 }
+getTotalNumberUnreadMessages()
 getHighestBalance()
 getAverageBalance()
 getInactiveCount()
