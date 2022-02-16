@@ -1005,6 +1005,16 @@ function getTotalNumberUnreadMessages(){
     console.log(total)
     profileReport.totalUnreadMessages = total;
 }
+function getAverageNumberUnreadMessages(){
+    let total = 0
+    let messages = 0
+    profiles.forEach((e)=>{
+        total += parseInt(e.greeting.match(/\d+/g));
+    })
+    console.log(total)
+    profileReport.averageUnreadMessages = (total/profiles.length).toFixed(0);
+}
+getAverageNumberUnreadMessages()
 getTotalNumberUnreadMessages()
 getHighestBalance()
 getAverageBalance()
