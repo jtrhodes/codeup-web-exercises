@@ -1014,6 +1014,10 @@ function getAverageNumberUnreadMessages(){
     console.log(total)
     profileReport.averageUnreadMessages = (total/profiles.length).toFixed(0);
 }
+function getAverageAge(){
+    let total =0
+
+}
 getAverageNumberUnreadMessages()
 getTotalNumberUnreadMessages()
 getHighestBalance()
@@ -1042,7 +1046,12 @@ console.log(profileReport)
 //  getBalancesForActiveAndNonActive() should return the balance of all non-active accounts vs. the balance of all active accounts?
 //     this last method should return an object that looks like {"active-balances": 23000, "inactive-balances": 4000} w/ different numbers.
 
-
+var person1 ={
+    name:''
+}
+var person2= person1
+person2.name = "Bob"
+console.log(person1.name)
 // Exercise 6. Practice with assignment by reference
 // create a variable named person1 with a name property. Assign it a name property.
 // Now create a variable named person2 and assign person1 to it.
@@ -1054,7 +1063,8 @@ console.log(profileReport)
 
 // Exercise 7. More practice with assignment by reference
 // Add the following HTML to your index.html page in this project.
-// <input type="text" id="input" name="input">
+var input = document.getElementById("input")
+var inputElement =document.getElementById("input")
 // now, create a variable named input and assign it document.getElementById("input").
 // now run input.value = "Hello" from the JS console. Did you see any HTML change?
 // Create a second variable named inputElement.
@@ -1068,7 +1078,16 @@ console.log(profileReport)
 // ## OBJECTS BONUSES
 //
 // 1. Create a dog object
-//
+var dog ={
+    breed:"",
+    weightInPounds:0,
+    age:0,
+    color:'',
+    sterilized:false,
+    shotRecords:[
+        {date:0,typeOfShot:''}
+    ]
+}
 // The dog object should have properties for:
 //
 // - breed (string),
