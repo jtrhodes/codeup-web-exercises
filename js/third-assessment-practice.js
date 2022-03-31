@@ -224,3 +224,62 @@ function createUserObject(arr1,arr2) {
 console.log(createUserObject(usernames, ages))
 	// createUsersObject(usernames, ages) // returns {cindy: 34, fred: 22, cathy: 45}
 	// ```
+// function getUniqueCharacter(s) {
+// 	// Write your code here
+// 	var unique = ''
+// 	var count = 0
+// 	var badCount = 0
+// 	for(let i = 0;i<s.length;i++){
+// 		if(unique.includes(s[i])===false){
+// 			unique += s[i]
+// 		}
+// 	}
+// 	for(let i=0;i<unique.length;i++){
+// 		if(unique.includes(s[i])===true){
+// 			badCount++
+// 		}
+// 	}
+// 	if(badCount ==2){
+// 		return -1
+// 	}
+// 	return unique
+// }
+// var test = 'hackthegame'
+// console.log(getUniqueCharacter(test))
+// for(let i = 0;i<s.length;i++){
+// 	if(unique.includes(s[i])===false){
+// 		unique += s[i]
+// 	}
+// }
+// for(let i=0;i<unique.length;i++){
+// 	if(unique.includes(s[i])===true){
+// 		badCount++
+// 	}
+// }
+// if(badCount ==2){
+// 	return -1
+// }
+// return unique.length
+function getUniqueCharacter(s) {
+	// Write your code here
+	const Chars = 256
+	let arr = new Array(Chars)
+	for(let i=0;i<Chars;i++){
+		arr[i] =[0,0];
+	}
+	for(let i=0;i<s.length;i++){
+		arr[s.charCodeAt(i)][0]++;
+		arr[s.charCodeAt(i)][1]= i;
+	}
+	let ret = Number.MAX_VALUE;
+	for(let i=0;i<Chars;i++){
+		if(arr[i][0]==1){
+			ret = Math.min(ret, arr[i][1]+ 1);
+		}
+	}
+	if(ret == Number.MAX_VALUE){
+		return -1
+	}
+
+	return ret
+}
